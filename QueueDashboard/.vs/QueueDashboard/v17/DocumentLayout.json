@@ -1,0 +1,187 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{453E2E6B-7895-45CA-9637-E5AD253A3B15}|QueueDashboard\\QueueDashboard.csproj|C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\queuedashboard\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{453E2E6B-7895-45CA-9637-E5AD253A3B15}|QueueDashboard\\QueueDashboard.csproj|solutionrelative:queuedashboard\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453E2E6B-7895-45CA-9637-E5AD253A3B15}|QueueDashboard\\QueueDashboard.csproj|c:\\users\\admin\\desktop\\side projects\\queuing system\\queuedashboard\\queuedashboard\\helpers\\apiconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{453E2E6B-7895-45CA-9637-E5AD253A3B15}|QueueDashboard\\QueueDashboard.csproj|solutionrelative:queuedashboard\\helpers\\apiconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453E2E6B-7895-45CA-9637-E5AD253A3B15}|QueueDashboard\\QueueDashboard.csproj|C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\queuedashboard\\helpers\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{453E2E6B-7895-45CA-9637-E5AD253A3B15}|QueueDashboard\\QueueDashboard.csproj|solutionrelative:queuedashboard\\helpers\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453E2E6B-7895-45CA-9637-E5AD253A3B15}|QueueDashboard\\QueueDashboard.csproj|C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\queuedashboard\\models\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{453E2E6B-7895-45CA-9637-E5AD253A3B15}|QueueDashboard\\QueueDashboard.csproj|solutionrelative:queuedashboard\\models\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453E2E6B-7895-45CA-9637-E5AD253A3B15}|QueueDashboard\\QueueDashboard.csproj|C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\queuedashboard\\models\\dto\\apiresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{453E2E6B-7895-45CA-9637-E5AD253A3B15}|QueueDashboard\\QueueDashboard.csproj|solutionrelative:queuedashboard\\models\\dto\\apiresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453E2E6B-7895-45CA-9637-E5AD253A3B15}|QueueDashboard\\QueueDashboard.csproj|c:\\users\\admin\\desktop\\side projects\\queuing system\\queuedashboard\\queuedashboard\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{453E2E6B-7895-45CA-9637-E5AD253A3B15}|QueueDashboard\\QueueDashboard.csproj|solutionrelative:queuedashboard\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453E2E6B-7895-45CA-9637-E5AD253A3B15}|QueueDashboard\\QueueDashboard.csproj|C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\queuedashboard\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{453E2E6B-7895-45CA-9637-E5AD253A3B15}|QueueDashboard\\QueueDashboard.csproj|solutionrelative:queuedashboard\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453E2E6B-7895-45CA-9637-E5AD253A3B15}|QueueDashboard\\QueueDashboard.csproj|C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\queuedashboard\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{453E2E6B-7895-45CA-9637-E5AD253A3B15}|QueueDashboard\\QueueDashboard.csproj|solutionrelative:queuedashboard\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453E2E6B-7895-45CA-9637-E5AD253A3B15}|QueueDashboard\\QueueDashboard.csproj|C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\queuedashboard\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{453E2E6B-7895-45CA-9637-E5AD253A3B15}|QueueDashboard\\QueueDashboard.csproj|solutionrelative:queuedashboard\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453E2E6B-7895-45CA-9637-E5AD253A3B15}|QueueDashboard\\QueueDashboard.csproj|C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\queuedashboard\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{453E2E6B-7895-45CA-9637-E5AD253A3B15}|QueueDashboard\\QueueDashboard.csproj|solutionrelative:queuedashboard\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\QueueDashboard\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "QueueDashboard\\App_Start\\RouteConfig.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\QueueDashboard\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "QueueDashboard\\App_Start\\RouteConfig.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-29T14:38:04.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "APIResponseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\QueueDashboard\\Models\\DTO\\APIResponseDTO.cs",
+              "RelativeDocumentMoniker": "QueueDashboard\\Models\\DTO\\APIResponseDTO.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\QueueDashboard\\Models\\DTO\\APIResponseDTO.cs",
+              "RelativeToolTip": "QueueDashboard\\Models\\DTO\\APIResponseDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T11:28:10.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\QueueDashboard\\Models\\DTO\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "QueueDashboard\\Models\\DTO\\LoginDTO.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\QueueDashboard\\Models\\DTO\\LoginDTO.cs",
+              "RelativeToolTip": "QueueDashboard\\Models\\DTO\\LoginDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T11:11:54.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\QueueDashboard\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "QueueDashboard\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\QueueDashboard\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "QueueDashboard\\Views\\_ViewStart.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-28T10:57:48.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\QueueDashboard\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "QueueDashboard\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\QueueDashboard\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "QueueDashboard\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-28T10:56:39.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\QueueDashboard\\Views\\Login\\Index.cshtml",
+              "RelativeDocumentMoniker": "QueueDashboard\\Views\\Login\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\QueueDashboard\\Views\\Login\\Index.cshtml",
+              "RelativeToolTip": "QueueDashboard\\Views\\Login\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-16T12:25:44.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\QueueDashboard\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "QueueDashboard\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\QueueDashboard\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "QueueDashboard\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwDcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-14T09:42:53.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "APIConnection.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\QueueDashboard\\Helpers\\APIConnection.cs",
+              "RelativeDocumentMoniker": "QueueDashboard\\Helpers\\APIConnection.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\QueueDashboard\\Helpers\\APIConnection.cs",
+              "RelativeToolTip": "QueueDashboard\\Helpers\\APIConnection.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T10:50:06.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "APIService.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\QueueDashboard\\Helpers\\APIService.cs",
+              "RelativeDocumentMoniker": "QueueDashboard\\Helpers\\APIService.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\QueueDashboard\\Helpers\\APIService.cs",
+              "RelativeToolTip": "QueueDashboard\\Helpers\\APIService.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAWwCwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T10:48:30.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\QueueDashboard\\Web.config",
+              "RelativeDocumentMoniker": "QueueDashboard\\Web.config",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueDashboard\\QueueDashboard\\Web.config",
+              "RelativeToolTip": "QueueDashboard\\Web.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-07-16T11:49:23.559Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

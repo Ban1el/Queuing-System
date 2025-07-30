@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QueueDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="account_id" />
+    </Key>
+    <Property Name="account_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="usertype_id" Type="Int32" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="middle_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mobile_number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="date_created" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="date_modified" Type="DateTime" Precision="3" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="ltb_Usertype" Relationship="Self.FK_Account_ltb_Usertype" FromRole="Account" ToRole="ltb_Usertype" />
+    <NavigationProperty Name="Queues" Relationship="Self.FK_Queue_Account" FromRole="Account" ToRole="Queue" />
+  </EntityType>
+  <EntityType Name="ltb_Usertype">
+    <Key>
+      <PropertyRef Name="usertype_id" />
+    </Key>
+    <Property Name="usertype_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="date_created" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Accounts" Relationship="Self.FK_Account_ltb_Usertype" FromRole="ltb_Usertype" ToRole="Account" />
+  </EntityType>
+  <EntityType Name="Queue">
+    <Key>
+      <PropertyRef Name="queue_id" />
+    </Key>
+    <Property Name="queue_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="account_id" Type="Int32" />
+    <Property Name="queue_number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="date_created" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="date_completed" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Account" Relationship="Self.FK_Queue_Account" FromRole="Queue" ToRole="Account" />
+  </EntityType>
+  <Association Name="FK_Account_ltb_Usertype">
+    <End Role="ltb_Usertype" Type="Self.ltb_Usertype" Multiplicity="1" />
+    <End Role="Account" Type="Self.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ltb_Usertype">
+        <PropertyRef Name="usertype_id" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="usertype_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Queue_Account">
+    <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+    <End Role="Queue" Type="Self.Queue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="account_id" />
+      </Principal>
+      <Dependent Role="Queue">
+        <PropertyRef Name="account_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QueueDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accounts" EntityType="Self.Account" />
+    <EntitySet Name="ltb_Usertype" EntityType="Self.ltb_Usertype" />
+    <EntitySet Name="Queues" EntityType="Self.Queue" />
+    <AssociationSet Name="FK_Account_ltb_Usertype" Association="Self.FK_Account_ltb_Usertype">
+      <End Role="ltb_Usertype" EntitySet="ltb_Usertype" />
+      <End Role="Account" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Queue_Account" Association="Self.FK_Queue_Account">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="Queue" EntitySet="Queues" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

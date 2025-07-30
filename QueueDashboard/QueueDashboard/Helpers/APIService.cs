@@ -1,0 +1,47 @@
+﻿using Newtonsoft.Json;
+using QueueDashboard.Models.DTO;
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Linq;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
+using System.Web;
+
+namespace QueueDashboard.Helpers
+{
+    public class APIService
+    {
+        string APIurl = ConfigurationManager.AppSettings["APIURL"];
+        public async Task<string> GET(string url)
+        {
+            string result = null;
+            using (HttpClient client = new HttpClient())
+            {
+                HttpResponseMessage response = await client.GetAsync(APIurl + url);
+                if (response.IsSuccessStatusCode)
+                {
+                    result = await response.Content.ReadAsStringAsync();
+                }
+            }
+            return result;
+        }
+
+        public async Task<APIResponse> POST(string url, object data)
+        {
+            APIResponse result = new APIResponse();
+            using (HttpClient client = new HttpClient())
+            {
+                string json = JsonConvert.SerializeObject(data);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                HttpResponseMessage response = await client.PostAsync(APIurl + url, content);
+
+                result.statusCode = response.StatusCode;
+                result.content = await response.Content.ReadAsStringAsync();
+            }
+            return result;
+        }
+    }
+}

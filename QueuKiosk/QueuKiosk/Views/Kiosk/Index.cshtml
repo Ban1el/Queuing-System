@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<input type="text" name="name" id="name" class="form-control" placeholder="Enter name" />
+<button type="button" id="generateNumber" class="btn btn-primary">Generate Number</button>
+
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            
+            $('#generateNumber').click(function () {
+                 var name = $('#name').val();
+
+                 $.ajax({
+                     type: "POST",
+                     url: '@Url.Action("GenerateNumber", "Kiosk")',
+                     data: { name: name },
+                     success: function (response) {
+                         Swal.fire({
+                             title: "Success!",
+                             text: response.message,
+                             icon: "success"
+                         });
+                     },
+                     error: function () {
+                         alert('Error occurred.');
+                     }
+                 });
+            });
+        });
+    </script>
+}

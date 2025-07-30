@@ -1,0 +1,236 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8947BF3A-0BF3-40FD-A7C2-DA8FB09EF57E}|QueueAPI\\QueueAPI.csproj|c:\\users\\admin\\desktop\\side projects\\queuing system\\queueapi\\queueapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8947BF3A-0BF3-40FD-A7C2-DA8FB09EF57E}|QueueAPI\\QueueAPI.csproj|solutionrelative:queueapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8947BF3A-0BF3-40FD-A7C2-DA8FB09EF57E}|QueueAPI\\QueueAPI.csproj|C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\queueapi\\utils\\accountutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8947BF3A-0BF3-40FD-A7C2-DA8FB09EF57E}|QueueAPI\\QueueAPI.csproj|solutionrelative:queueapi\\utils\\accountutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8947BF3A-0BF3-40FD-A7C2-DA8FB09EF57E}|QueueAPI\\QueueAPI.csproj|C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\queueapi\\models\\dto\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8947BF3A-0BF3-40FD-A7C2-DA8FB09EF57E}|QueueAPI\\QueueAPI.csproj|solutionrelative:queueapi\\models\\dto\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8947BF3A-0BF3-40FD-A7C2-DA8FB09EF57E}|QueueAPI\\QueueAPI.csproj|C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\queueapi\\models\\dto\\authentication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8947BF3A-0BF3-40FD-A7C2-DA8FB09EF57E}|QueueAPI\\QueueAPI.csproj|solutionrelative:queueapi\\models\\dto\\authentication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8947BF3A-0BF3-40FD-A7C2-DA8FB09EF57E}|QueueAPI\\QueueAPI.csproj|C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\queueapi\\helpers\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8947BF3A-0BF3-40FD-A7C2-DA8FB09EF57E}|QueueAPI\\QueueAPI.csproj|solutionrelative:queueapi\\helpers\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8947BF3A-0BF3-40FD-A7C2-DA8FB09EF57E}|QueueAPI\\QueueAPI.csproj|C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\queueapi\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{8947BF3A-0BF3-40FD-A7C2-DA8FB09EF57E}|QueueAPI\\QueueAPI.csproj|solutionrelative:queueapi\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8947BF3A-0BF3-40FD-A7C2-DA8FB09EF57E}|QueueAPI\\QueueAPI.csproj|C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\queueapi\\helpers\\cryptohelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8947BF3A-0BF3-40FD-A7C2-DA8FB09EF57E}|QueueAPI\\QueueAPI.csproj|solutionrelative:queueapi\\helpers\\cryptohelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8947BF3A-0BF3-40FD-A7C2-DA8FB09EF57E}|QueueAPI\\QueueAPI.csproj|C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\queueapi\\models\\dto\\queuedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8947BF3A-0BF3-40FD-A7C2-DA8FB09EF57E}|QueueAPI\\QueueAPI.csproj|solutionrelative:queueapi\\models\\dto\\queuedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8947BF3A-0BF3-40FD-A7C2-DA8FB09EF57E}|QueueAPI\\QueueAPI.csproj|C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\queueapi\\helpers\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8947BF3A-0BF3-40FD-A7C2-DA8FB09EF57E}|QueueAPI\\QueueAPI.csproj|solutionrelative:queueapi\\helpers\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8947BF3A-0BF3-40FD-A7C2-DA8FB09EF57E}|QueueAPI\\QueueAPI.csproj|C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\queueapi\\controllers\\queuecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8947BF3A-0BF3-40FD-A7C2-DA8FB09EF57E}|QueueAPI\\QueueAPI.csproj|solutionrelative:queueapi\\controllers\\queuecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8947BF3A-0BF3-40FD-A7C2-DA8FB09EF57E}|QueueAPI\\QueueAPI.csproj|C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\queueapi\\controllers\\kioskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8947BF3A-0BF3-40FD-A7C2-DA8FB09EF57E}|QueueAPI\\QueueAPI.csproj|solutionrelative:queueapi\\controllers\\kioskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8947BF3A-0BF3-40FD-A7C2-DA8FB09EF57E}|QueueAPI\\QueueAPI.csproj|C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\queueapi\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8947BF3A-0BF3-40FD-A7C2-DA8FB09EF57E}|QueueAPI\\QueueAPI.csproj|solutionrelative:queueapi\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8947BF3A-0BF3-40FD-A7C2-DA8FB09EF57E}|QueueAPI\\QueueAPI.csproj|C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\queueapi\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8947BF3A-0BF3-40FD-A7C2-DA8FB09EF57E}|QueueAPI\\QueueAPI.csproj|solutionrelative:queueapi\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DBConnection.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\QueueAPI\\Helpers\\DBConnection.cs",
+              "RelativeDocumentMoniker": "QueueAPI\\Helpers\\DBConnection.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\QueueAPI\\Helpers\\DBConnection.cs",
+              "RelativeToolTip": "QueueAPI\\Helpers\\DBConnection.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACEAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T11:47:35.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountUtil.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\QueueAPI\\Utils\\AccountUtil.cs",
+              "RelativeDocumentMoniker": "QueueAPI\\Utils\\AccountUtil.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\QueueAPI\\Utils\\AccountUtil.cs",
+              "RelativeToolTip": "QueueAPI\\Utils\\AccountUtil.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAAwDQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T10:27:56.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\QueueAPI\\Models\\DTO\\AccountDTO.cs",
+              "RelativeDocumentMoniker": "QueueAPI\\Models\\DTO\\AccountDTO.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\QueueAPI\\Models\\DTO\\AccountDTO.cs",
+              "RelativeToolTip": "QueueAPI\\Models\\DTO\\AccountDTO.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAxwC8AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-20T12:03:29.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Enums.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\QueueAPI\\Helpers\\Enums.cs",
+              "RelativeDocumentMoniker": "QueueAPI\\Helpers\\Enums.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\QueueAPI\\Helpers\\Enums.cs",
+              "RelativeToolTip": "QueueAPI\\Helpers\\Enums.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T12:44:58.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CryptoHelper.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\QueueAPI\\Helpers\\CryptoHelper.cs",
+              "RelativeDocumentMoniker": "QueueAPI\\Helpers\\CryptoHelper.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\QueueAPI\\Helpers\\CryptoHelper.cs",
+              "RelativeToolTip": "QueueAPI\\Helpers\\CryptoHelper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T05:37:15.012Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Authentication.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\QueueAPI\\Models\\DTO\\Authentication.cs",
+              "RelativeDocumentMoniker": "QueueAPI\\Models\\DTO\\Authentication.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\QueueAPI\\Models\\DTO\\Authentication.cs",
+              "RelativeToolTip": "QueueAPI\\Models\\DTO\\Authentication.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAgwEwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-20T12:10:07.797Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "QueueDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\QueueAPI\\Models\\DTO\\QueueDTO.cs",
+              "RelativeDocumentMoniker": "QueueAPI\\Models\\DTO\\QueueDTO.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\QueueAPI\\Models\\DTO\\QueueDTO.cs",
+              "RelativeToolTip": "QueueAPI\\Models\\DTO\\QueueDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-20T12:03:06.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\QueueAPI\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "QueueAPI\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\QueueAPI\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "QueueAPI\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAYwC0AAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-20T11:51:05.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "QueueController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\QueueAPI\\Controllers\\QueueController.cs",
+              "RelativeDocumentMoniker": "QueueAPI\\Controllers\\QueueController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\QueueAPI\\Controllers\\QueueController.cs",
+              "RelativeToolTip": "QueueAPI\\Controllers\\QueueController.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABEAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T01:14:53.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\QueueAPI\\Web.config",
+              "RelativeDocumentMoniker": "QueueAPI\\Web.config",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\QueueAPI\\Web.config",
+              "RelativeToolTip": "QueueAPI\\Web.config",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAAAEwAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-07-20T11:49:52.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ValuesController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\QueueAPI\\Controllers\\ValuesController.cs",
+              "RelativeDocumentMoniker": "QueueAPI\\Controllers\\ValuesController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\QueueAPI\\Controllers\\ValuesController.cs",
+              "RelativeToolTip": "QueueAPI\\Controllers\\ValuesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T11:42:48.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\QueueAPI\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "QueueAPI\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\QueueAPI\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "QueueAPI\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T11:42:45.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "KioskController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\QueueAPI\\Controllers\\KioskController.cs",
+              "RelativeDocumentMoniker": "QueueAPI\\Controllers\\KioskController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Side Projects\\Queuing System\\QueueAPI\\QueueAPI\\Controllers\\KioskController.cs",
+              "RelativeToolTip": "QueueAPI\\Controllers\\KioskController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAwBUAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-14T09:36:50.491Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
