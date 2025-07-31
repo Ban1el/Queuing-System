@@ -43,16 +43,15 @@ namespace QueueDashboard.Controllers
                 var cookie = new HttpCookie("AuthToken", tokenModel.token)
                 {
                     HttpOnly = true,
-                    Secure = true, 
-                    Expires = DateTime.Now.AddHours(1)
+                    Secure = true,
+                    SameSite = SameSiteMode.Strict
                 };
 
-                Response.Headers.Add("Set-Cookie",
-                    $"{cookie.Name}={cookie.Value}; expires={cookie.Expires:R}; path=/; HttpOnly; Secure; SameSite=Strict");
+                Response.Cookies.Add(cookie);
             }
 
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Counter");
         }
     }
 }

@@ -219,6 +219,7 @@
     <Compile Include="Controllers\KioskController.cs" />
     <Compile Include="Controllers\QueueController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Filters\AuthenticationAttribute .cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -229,7 +230,7 @@
       <DependentUpon>Queue.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DTO\AccountDTO.cs" />
-    <Compile Include="Models\DTO\Authentication.cs" />
+    <Compile Include="Models\DTO\JWTAuthentication.cs" />
     <Compile Include="Models\DTO\QueueDTO.cs" />
     <Compile Include="Models\ltb_Usertype.cs">
       <DependentUpon>Queue.tt</DependentUpon>

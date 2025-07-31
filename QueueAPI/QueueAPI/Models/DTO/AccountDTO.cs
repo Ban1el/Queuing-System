@@ -27,8 +27,6 @@ namespace QueueAPI.Models.DTO
     public class AccountModel
     {
         public int account_id { get; set; }
-        public int usertype_id { get; set; }
-        public string usertype_name { get; set; }
         public string username { get; set; }
         public string password { get; set; }
         public string first_name { get; set; }

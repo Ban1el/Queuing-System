@@ -40,9 +40,9 @@ namespace QueueAPI.Controllers
 
                     if (user != null)
                     {
-                        var roles = new string[] { user.usertype_name };
-                        var jwtSecurityToken = Authentication.GenerateJwtToken(dto.Username, roles.ToList());
-                        var validUserName = Authentication.ValidateToken(jwtSecurityToken);
+                        var roles = new string[] { "Admin" };
+                        var jwtSecurityToken = JWTAuthentication.GenerateJwtToken(dto.Username, roles.ToList());
+                        var validUserName = JWTAuthentication.ValidateToken(jwtSecurityToken);
                         return Ok(new { token = jwtSecurityToken });
                     }
 

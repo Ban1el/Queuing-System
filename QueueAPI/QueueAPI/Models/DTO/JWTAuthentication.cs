@@ -10,7 +10,7 @@ using System.Web;
 
 namespace QueueAPI.Models.DTO
 {
-    public class Authentication
+    public class JWTAuthentication
     {
         // Generate token
         public static string GenerateJwtToken(string username, List<string> roles)
