@@ -15,11 +15,14 @@ namespace QueueDashboard.Helpers
         {
             return await apiService.POST("Account/Login", dto);
         }
-
-        // GET: APIConnection
-        public async Task<string> GetKiosk()
+        public async Task<APIResponse> GetKiosk()
         {
-            return await apiService.GET("/kiosk/get");
+            return await apiService.GET("/kiosk/Get");
+        }
+
+        public async Task<APIResponse> GetCounters()
+        {
+            return await apiService.GET("/counter/Get");
         }
     }
 }

@@ -1,0 +1,65 @@
+﻿@model List<QueueDashboard.Models.DTO.CounterModel>
+@{
+    ViewBag.Title = "Counter Management";
+}
+
+@{ Html.RenderPartial("NavBar");
+
+}
+
+<div class="container-fluid">
+    <div class="card">
+
+        <div class="row mt-3">
+            <div class="col-12 d-flex justify-content-end">
+                <input type="button" class="btn btn-primary me-3" value="Add"/>
+            </div>
+        </div>
+
+        <div class="card-body">
+            <table id="counter-table" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th>Active</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        foreach (var counter in Model)
+                        {
+                            <tr>
+                                <td>@counter.name</td>
+                                <td>@counter.description</td>
+                                <td>@counter.status</td>
+                                <td>@counter.is_active</td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                    }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th>Active</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script>
+        new DataTable('#counter-table');
+    </script>
+}

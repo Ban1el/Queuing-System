@@ -9,7 +9,7 @@ using System.Web.Http.Filters;
 
 namespace QueueAPI.Filters
 {
-    public class AuthenticationAttribute: AuthorizationFilterAttribute
+    public class AuthenticationFilter : AuthorizationFilterAttribute
     {
         public override void OnAuthorization(HttpActionContext actionContext)
         {

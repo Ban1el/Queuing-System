@@ -17,6 +17,7 @@ namespace QueueAPI.Utils
         public string password;
         #endregion
 
+        DBConnection db = new DBConnection();
         public AccountModel Login()
         {
             List<SqlParameter> parameters = new List<SqlParameter>
@@ -24,8 +25,6 @@ namespace QueueAPI.Utils
                 new SqlParameter("@username", username),
                 new SqlParameter("@password", password)
             };
-
-            DBConnection db = new DBConnection();
 
             DataTable dt = db.Read("sp_login_validate", parameters);
 
@@ -41,8 +40,6 @@ namespace QueueAPI.Utils
             {
                 new SqlParameter("@username", username)
             };
-
-            DBConnection db = new DBConnection();
 
             DataTable dt = db.Read("sp_account_get", parameters);
 
