@@ -15,5 +15,6 @@ namespace QueueDashboard.Models.DTO
     public class TokenModel
     {
         public string token { get; set; }
+        public int account_id { get; set; }
     }
 }

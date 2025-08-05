@@ -38,7 +38,7 @@ namespace QueueDashboard.Controllers
             if (result.statusCode == HttpStatusCode.OK)
             {
                 TokenModel tokenModel = JsonConvert.DeserializeObject<TokenModel>(result.content);
-
+                Session["account_id"] = tokenModel.account_id;
 
                 var cookie = new HttpCookie("AuthToken", tokenModel.token)
                 {
@@ -51,7 +51,7 @@ namespace QueueDashboard.Controllers
             }
 
 
-            return RedirectToAction("Index", "Counter");
+            return RedirectToAction("List", "Counter");
         }
     }
 }

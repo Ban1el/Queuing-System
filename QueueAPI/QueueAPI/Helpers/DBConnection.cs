@@ -58,5 +58,35 @@ namespace QueueAPI.Helpers
 
             return dt;
         }
+
+        public int Execute(string sp_name, List<SqlParameter> parameters = null, DBConnectionName cs = DBConnectionName.QueueDB)
+        {
+            int affectedRows = 0;
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                {
+                    using (SqlCommand cmd = new SqlCommand(sp_name, connection))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        if (parameters != null)
+                        {
+                            cmd.Parameters.AddRange(parameters.ToArray());
+                        }
+
+                        connection.Open();
+                        affectedRows = cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception Occurred: {ex.Message}");
+            }
+
+            return affectedRows;
+        }
     }
 }

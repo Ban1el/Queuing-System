@@ -43,7 +43,7 @@ namespace QueueAPI.Controllers
                         var roles = new string[] { "Admin" };
                         var jwtSecurityToken = JWTAuthentication.GenerateJwtToken(dto.Username, roles.ToList());
                         var validUserName = JWTAuthentication.ValidateToken(jwtSecurityToken);
-                        return Ok(new { token = jwtSecurityToken });
+                        return Ok(new { token = jwtSecurityToken, account_id = user.account_id });
                     }
 
                     return BadRequest("Incorrect password");

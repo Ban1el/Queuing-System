@@ -11,18 +11,23 @@ namespace QueueDashboard.Helpers
     {
         APIService apiService = new APIService();
 
+        #region Account
         public async Task<APIResponse> AccountLogin(LoginModel dto)
         {
             return await apiService.POST("Account/Login", dto);
         }
-        public async Task<APIResponse> GetKiosk()
-        {
-            return await apiService.GET("/kiosk/Get");
-        }
+        #endregion
 
+        #region Counter
         public async Task<APIResponse> GetCounters()
         {
             return await apiService.GET("/counter/Get");
         }
+
+        public async Task<APIResponse> AddCounter(CounterAddModel dto)
+        {
+            return await apiService.POST("/counter/Add", dto);
+        }
+        #endregion
     }
 }

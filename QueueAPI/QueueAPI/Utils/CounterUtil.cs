@@ -13,6 +13,42 @@ namespace QueueAPI.Utils
     public class CounterUtil
     {
         DBConnection db = new DBConnection();
+
+        #region properties
+        public int account_id { get; set; }
+        public string name { get; set; }
+        public string description { get; set; }
+        public string status { get; set; }
+        public DateTime date_created { get; set; }
+        public DateTime date_modified { get; set; }
+        public bool is_active { get; set; }
+        public bool logged_in { get; set; }
+        #endregion
+
+        #region constants
+        public const string InUse = "In-Use";
+        public const string NotInUse = "Not In-Use";
+        #endregion
+
+        public int CounterAdd()
+        {
+            int rows_affected = 0;
+
+            List<SqlParameter> parameters = new List<SqlParameter>
+            {
+                new SqlParameter("@account_id", account_id),
+                new SqlParameter("@name", name),
+                new SqlParameter("@description", description),
+                new SqlParameter("@status", status),
+                new SqlParameter("@date_created", date_created),
+                new SqlParameter("@is_active", is_active)
+            };
+
+            rows_affected = db.Execute("sp_counter_add", parameters);
+
+            return rows_affected;
+        }
+
         public List<CounterModel> Counters()
         {
             DataTable dt = db.Read("sp_counters_get");

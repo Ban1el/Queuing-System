@@ -12,7 +12,7 @@
 
         <div class="row mt-3">
             <div class="col-12 d-flex justify-content-end">
-                <input type="button" class="btn btn-primary me-3" value="Add"/>
+                <input type="button" class="btn btn-primary me-3" value="Add" data-bs-toggle="modal" data-bs-target="#add-counter-modal"/>
             </div>
         </div>
 
@@ -56,10 +56,80 @@
     </div>
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="add-counter-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Add Counter</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-3">
+                    <div class="col-3">
+                        Name:
+                    </div>
+                    <div class="col-9">
+                        <input type="text" name="counter_name" id="counter_name" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-3">
+                        Description:
+                    </div>
+                    <div class="col-9">
+                        <input type="text" name="counter_description" id="counter_description" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="btn-add-counter">Add</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 @section Scripts {
     <script>
         new DataTable('#counter-table');
+    </script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('#btn-add-counter').click(function () {
+                AddCounter();
+            });
+
+            function AddCounter() {
+                var name = $('#counter_name').val();
+                var description = $('#counter_description').val();
+
+                if (name == null || name.trim() === "") {
+                    alert("Name required");
+                    return;
+                }
+
+                 $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("Create", "Counter")',
+                     data: {
+                         name: name,
+                         description: description
+                     },
+                    success: function (response) {
+                        alert('Success: ' + response.message);
+                        location.reload();
+                    },
+                    error: function () {
+                        alert('Internal Server Error.');
+                    }
+                });
+            }
+        });
     </script>
 }
