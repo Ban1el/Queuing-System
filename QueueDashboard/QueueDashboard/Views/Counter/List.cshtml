@@ -22,8 +22,8 @@
                     <tr>
                         <th>Name</th>
                         <th>Description</th>
+                        <th>Log Status</th>
                         <th>Status</th>
-                        <th>Active</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -35,7 +35,16 @@
                                 <td>@counter.name</td>
                                 <td>@counter.description</td>
                                 <td>@counter.status</td>
-                                <td>@counter.is_active</td>
+                                <td>
+                                    @if (@counter.is_active)
+                                    {
+                                        <span class="badge text-bg-success">Active</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge text-bg-success">Inactive</span>
+                                    }
+                                </td>
                             </tr>
                         }
                     }

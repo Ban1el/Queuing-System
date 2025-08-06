@@ -220,6 +220,7 @@
     <Compile Include="Controllers\QueueController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Filters\AuthenticationFilter.cs" />
+    <Compile Include="Filters\RoleAuthorizeAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -232,6 +233,7 @@
     <Compile Include="Models\DTO\AccountDTO.cs" />
     <Compile Include="Models\DTO\CounterDTO.cs" />
     <Compile Include="Models\DTO\JWTAuthentication.cs" />
+    <Compile Include="Models\DTO\JWTDTO.cs" />
     <Compile Include="Models\DTO\QueueDTO.cs" />
     <Compile Include="Models\ltb_Usertype.cs">
       <DependentUpon>Queue.tt</DependentUpon>
@@ -254,6 +256,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Queue.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Roles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\AccountUtil.cs" />
     <Compile Include="Utils\CounterUtil.cs" />

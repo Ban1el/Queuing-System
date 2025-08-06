@@ -19,6 +19,33 @@ namespace QueueDashboard.Controllers
             return View();
         }
 
+        public async Task<ActionResult> SelectCounter()
+        {
+            APIResponse result = await ap.GetCounters();
+            CounterListModel counter = null;
+
+            List<SelectListItem> statusList = null;
+
+            if (result.statusCode == HttpStatusCode.OK)
+            {
+                counter = JsonConvert.DeserializeObject<CounterListModel>(result.content);
+
+                statusList = counter.counters
+                                    .Select(c => new SelectListItem
+                                    {
+                                        Text = c.name,
+                                        Value = c.counter_id.ToString()
+                                    }).ToList();
+            }
+            else
+            {
+                //redirect to error page
+            }
+
+            ViewBag.StatusList = statusList;
+            return View();
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(string username, string password)

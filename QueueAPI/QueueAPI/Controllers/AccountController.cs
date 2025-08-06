@@ -1,4 +1,5 @@
 ﻿using QueueAPI.Models.DTO;
+using QueueAPI.Models;
 using QueueAPI.Utils;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ using System.Web.Http;
 using Newtonsoft.Json;
 using System.Web.Helpers;
 using QueueAPI.Helpers;
+
 
 namespace QueueAPI.Controllers
 {
@@ -40,7 +42,7 @@ namespace QueueAPI.Controllers
 
                     if (user != null)
                     {
-                        var roles = new string[] { "Admin" };
+                        var roles = new string[] { Roles.Admin };
                         var jwtSecurityToken = JWTAuthentication.GenerateJwtToken(dto.Username, roles.ToList());
                         var validUserName = JWTAuthentication.ValidateToken(jwtSecurityToken);
                         return Ok(new { token = jwtSecurityToken, account_id = user.account_id });

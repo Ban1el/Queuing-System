@@ -7,42 +7,11 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Web;
-using QueueAPI.Models.DTO;
 
-namespace QueueAPI.Models.DTO
+namespace QueueDashboard.Models.DTO
 {
     public class JWTAuthentication
     {
-        // Generate token
-        public static string GenerateJwtToken(string username, List<string> roles)
-        {
-            var claims = new List<Claim>
-            {
-                new Claim(JwtRegisteredClaimNames.Sub, username),
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                new Claim(ClaimTypes.NameIdentifier, username)
-
-            };
-
-            roles.ForEach(role =>
-            {
-                claims.Add(new Claim(ClaimTypes.Role, role));
-            });
-
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Convert.ToString(ConfigurationManager.AppSettings["config:JwtKey"])));
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-            var expires = DateTime.UtcNow.AddDays(Convert.ToDouble(Convert.ToString(ConfigurationManager.AppSettings["config:JwtExpireDays"])));
-
-            var token = new JwtSecurityToken(
-                Convert.ToString(ConfigurationManager.AppSettings["config:JwtIssuer"]),
-                Convert.ToString(ConfigurationManager.AppSettings["config:JwtAudience"]),
-                claims,
-                expires: expires,
-                signingCredentials: creds
-            );
-
-            return new JwtSecurityTokenHandler().WriteToken(token);
-        }
         // Validate the token
         public static AuthenticatedUserModel ValidateToken(string token)
         {
@@ -68,12 +37,12 @@ namespace QueueAPI.Models.DTO
                 var userName = jwtToken.Claims.First(sub => sub.Type == "sub").Value;
 
                 var roles = jwtToken.Claims
-                                    .Where(c => c.Type == ClaimTypes.Role) 
+                                    .Where(c => c.Type == ClaimTypes.Role)
                                     .Select(c => c.Value)
                                     .ToList();
 
-                AuthenticatedUserModel user = new AuthenticatedUserModel 
-                { 
+                AuthenticatedUserModel user = new AuthenticatedUserModel
+                {
                     Username = userName,
                     Roles = roles,
                 };

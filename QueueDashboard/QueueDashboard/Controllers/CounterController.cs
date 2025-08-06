@@ -11,6 +11,7 @@ using Newtonsoft.Json;
 using QueueDashboard.Filters;
 using QueueDashboard.Helpers;
 using QueueDashboard.Models.DTO;
+using QueueDashboard.Models;
 
 namespace QueueDashboard.Controllers
 {
@@ -40,6 +41,7 @@ namespace QueueDashboard.Controllers
             return View(counter.counters);
         }
 
+        [RoleAuthorize(Roles.Admin)]
         [HttpPost]
         public async Task<JsonResult> Create(string name, string description)
         {

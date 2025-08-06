@@ -7,6 +7,7 @@ using System.Web.Http;
 using QueueAPI.Filters;
 using QueueAPI.Models.DTO;
 using QueueAPI.Utils;
+using QueueAPI.Models;
 
 namespace QueueAPI.Controllers
 {
@@ -14,14 +15,16 @@ namespace QueueAPI.Controllers
     [RoutePrefix("api/counter")]
     public class CounterController : ApiController
     {
+        [AllowAnonymous]
         [HttpGet]
         [Route("Get")]
         public IHttpActionResult Counters()
         {
             CounterUtil counter = new CounterUtil();
-            return Ok(new { CounterModelList = counter.Counters() });
+            return Ok(new { counters = counter.Counters() });
         }
 
+        [RoleAuthorize(Roles.Admin)]
         [HttpPost]
         [Route("Add")]
         public IHttpActionResult Add([FromBody] CounterAddModel dto)
