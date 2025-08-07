@@ -9,9 +9,36 @@
             <div class="card">
                 <div class="card-body d-flex justify-content-center">
                     @Html.DropDownList("Status", ViewBag.StatusList as List<SelectListItem>, "Select Status", new { @class = "form-control" })
+                    @Html.AntiForgeryToken()
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $('#Status').change(function () {
+                var counter_id = $(this).val();
+                var token = $('input[name="__RequestVerificationToken"]').val();
+                 $.ajax({
+                     type: "POST",
+                     url: '@Url.Action("LoginCounter", "Login")',
+                      data: {
+                          counter_id: counter_id,
+                          __RequestVerificationToken: token
+                      },
+                     success: function (response) {
+                         window.location.href = '@Url.Action("Index", "Counter")';
+                     },
+                     error: function () {
+                         alert('Internal Server Error.');
+                     }
+                 });
+
+          /*      window.location.href = '/YourController/YourAction?status=' + selectedValue;*/
+            });
+        });
+    </script>
+}

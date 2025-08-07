@@ -5,6 +5,11 @@ using System.Web;
 
 namespace QueueDashboard.Models.DTO
 {
+    public class CounterLoginModel
+    {
+        public int counter_id { get; set; }
+    }
+
     public class CounterModel
     {
         public int counter_id { get; set; }

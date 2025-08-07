@@ -19,6 +19,8 @@ namespace QueueDashboard.Controllers
     public class CounterController : Controller
     {
         APIConnection ap = new APIConnection();
+
+        [RoleAuthorize(Roles.Counter)]
         public ActionResult Index()
         {
             return View();

@@ -8,6 +8,7 @@ using QueueAPI.Filters;
 using QueueAPI.Models.DTO;
 using QueueAPI.Utils;
 using QueueAPI.Models;
+using QueueAPI.Helpers;
 
 namespace QueueAPI.Controllers
 {
@@ -15,6 +16,34 @@ namespace QueueAPI.Controllers
     [RoutePrefix("api/counter")]
     public class CounterController : ApiController
     {
+        CounterUtil counterUtil = new CounterUtil();
+
+        [AllowAnonymous]
+        [HttpPost]
+        [Route("Login")]
+        public IHttpActionResult Login([FromBody] CounterLoginModel dto)
+        {
+            try
+            {
+                counterUtil.counter_id = dto.counter_id;
+                CounterModel counter = counterUtil.GetCounterByID();
+
+                if (counter != null)
+                {
+                    var roles = new string[] { Roles.Counter };
+                    var jwtSecurityToken = JWTAuthentication.GenerateJwtToken(counter.name, roles.ToList());
+                    var validUserName = JWTAuthentication.ValidateToken(jwtSecurityToken);
+                    return Ok(new { token = jwtSecurityToken, counter_id = counter.counter_id });
+                }
+
+                return BadRequest("Counter not found");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest();
+            }
+        }
+
         [AllowAnonymous]
         [HttpGet]
         [Route("Get")]

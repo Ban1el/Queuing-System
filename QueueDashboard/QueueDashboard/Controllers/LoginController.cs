@@ -80,5 +80,38 @@ namespace QueueDashboard.Controllers
 
             return RedirectToAction("List", "Counter");
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<JsonResult> LoginCounter(int counter_id)
+        {
+            if (counter_id == 0)
+            {
+                return Json(new { success = true, message = "Counter ID Invalid." });
+            }
+
+            APIResponse result = await ap.CounterLogin(new CounterLoginModel { counter_id = counter_id });
+
+            if (result.statusCode == HttpStatusCode.OK)
+            {
+                TokenModel tokenModel = JsonConvert.DeserializeObject<TokenModel>(result.content);
+                Session["counter_id"] = tokenModel.counter_id;
+
+                var cookie = new HttpCookie("AuthToken", tokenModel.token)
+                {
+                    HttpOnly = true,
+                    Secure = true,
+                    SameSite = SameSiteMode.Strict
+                };
+
+                Response.Cookies.Add(cookie);
+
+                return Json(new { success = true, message = "Login Success!" });
+            }
+            else
+            {
+                return Json(new { success = false, message = "Internal Error." });
+            }
+        }
     }
 }

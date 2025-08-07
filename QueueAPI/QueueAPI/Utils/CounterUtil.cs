@@ -16,6 +16,7 @@ namespace QueueAPI.Utils
 
         #region properties
         public int account_id { get; set; }
+        public int counter_id { get; set; }
         public string name { get; set; }
         public string description { get; set; }
         public string status { get; set; }
@@ -57,6 +58,22 @@ namespace QueueAPI.Utils
             var jsonResult = JsonConvert.DeserializeObject<List<CounterModel>>(jsonParam);
 
             return jsonResult;
+        }
+
+        public CounterModel GetCounterByID()
+        {
+            List<SqlParameter> parameters = new List<SqlParameter>
+            {
+                new SqlParameter("@counter_id", counter_id),
+            };
+
+
+            DataTable dt = db.Read("sp_counterById_get", parameters);
+
+            string jsonParam = JsonConvert.SerializeObject(dt);
+            var jsonResult = JsonConvert.DeserializeObject<List<CounterModel>>(jsonParam);
+
+            return jsonResult.FirstOrDefault();
         }
     }
 }

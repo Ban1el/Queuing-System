@@ -30,7 +30,7 @@ namespace QueueDashboard.Helpers
             return result;
         }
 
-        public async Task<APIResponse> POST(string url, object data)
+        public async Task<APIResponse> POST(string url, object data = null)
         {
             APIResponse result = new APIResponse();
             using (HttpClient client = new HttpClient())

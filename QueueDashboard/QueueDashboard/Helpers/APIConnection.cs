@@ -19,6 +19,10 @@ namespace QueueDashboard.Helpers
         #endregion
 
         #region Counter
+        public async Task<APIResponse> CounterLogin(CounterLoginModel dto)
+        {
+            return await apiService.POST("Counter/Login", dto);
+        }
         public async Task<APIResponse> GetCounters()
         {
             return await apiService.GET("/counter/Get");
