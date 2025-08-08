@@ -26,7 +26,7 @@ namespace QueueAPI.Models
         }
     
         public virtual DbSet<Account> Accounts { get; set; }
-        public virtual DbSet<ltb_Usertype> ltb_Usertype { get; set; }
+        public virtual DbSet<Counter> Counters { get; set; }
         public virtual DbSet<Queue> Queues { get; set; }
     }
 }

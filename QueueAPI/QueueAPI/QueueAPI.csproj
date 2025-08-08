@@ -230,14 +230,14 @@
     <Compile Include="Models\Account.cs">
       <DependentUpon>Queue.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Counter.cs">
+      <DependentUpon>Queue.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\DTO\AccountDTO.cs" />
     <Compile Include="Models\DTO\CounterDTO.cs" />
     <Compile Include="Models\DTO\JWTAuthentication.cs" />
     <Compile Include="Models\DTO\JWTDTO.cs" />
     <Compile Include="Models\DTO\QueueDTO.cs" />
-    <Compile Include="Models\ltb_Usertype.cs">
-      <DependentUpon>Queue.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Queue.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -283,8 +283,8 @@
     <Content Include="Global.asax" />
     <Content Include="Models\Queue.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Queue.Context.cs</LastGenOutput>
       <DependentUpon>Queue.edmx</DependentUpon>
+      <LastGenOutput>Queue.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\Queue.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

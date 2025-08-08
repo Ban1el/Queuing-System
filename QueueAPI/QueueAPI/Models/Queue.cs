@@ -15,13 +15,13 @@ namespace QueueAPI.Models
     public partial class Queue
     {
         public int queue_id { get; set; }
-        public Nullable<int> account_id { get; set; }
+        public Nullable<int> counter_id { get; set; }
         public string queue_number { get; set; }
         public string status { get; set; }
         public string name { get; set; }
         public System.DateTime date_created { get; set; }
         public Nullable<System.DateTime> date_completed { get; set; }
     
-        public virtual Account Account { get; set; }
+        public virtual Counter Counter { get; set; }
     }
 }

@@ -12,21 +12,25 @@ namespace QueueAPI.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class ltb_Usertype
+    public partial class Counter
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ltb_Usertype()
+        public Counter()
         {
-            this.Accounts = new HashSet<Account>();
+            this.Queues = new HashSet<Queue>();
         }
     
-        public int usertype_id { get; set; }
+        public int counter_id { get; set; }
+        public int account_id { get; set; }
         public string name { get; set; }
         public string description { get; set; }
+        public string status { get; set; }
         public System.DateTime date_created { get; set; }
+        public Nullable<System.DateTime> date_modified { get; set; }
         public bool is_active { get; set; }
     
+        public virtual Account Account { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Account> Accounts { get; set; }
+        public virtual ICollection<Queue> Queues { get; set; }
     }
 }

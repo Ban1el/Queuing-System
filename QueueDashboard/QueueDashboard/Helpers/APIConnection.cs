@@ -33,5 +33,12 @@ namespace QueueDashboard.Helpers
             return await apiService.POST("/counter/Add", dto);
         }
         #endregion
+
+        #region Queue
+        public async Task<APIResponse> GenerateQueueNumber(QueueCreateRequestModel dto)
+        {
+            return await apiService.POST("queue/add", dto);
+        }
+        #endregion
     }
 }

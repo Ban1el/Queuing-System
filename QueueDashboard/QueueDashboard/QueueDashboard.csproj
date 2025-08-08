@@ -175,6 +175,7 @@
     <Compile Include="Controllers\CounterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\QueueController.cs" />
     <Compile Include="Filters\AuthorizationFilter.cs" />
     <Compile Include="Filters\RoleAuthorizeAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -187,6 +188,7 @@
     <Compile Include="Models\DTO\JWTAuthentication.cs" />
     <Compile Include="Models\DTO\JWTDTO.cs" />
     <Compile Include="Models\DTO\LoginDTO.cs" />
+    <Compile Include="Models\DTO\QueueDTO.cs" />
     <Compile Include="Models\Roles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -250,6 +252,7 @@
     <Content Include="Views\Counter\List.cshtml" />
     <Content Include="Views\Shared\NavBar.cshtml" />
     <Content Include="Views\Login\SelectCounter.cshtml" />
+    <Content Include="Views\Queue\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

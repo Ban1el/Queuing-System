@@ -4,12 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="796d7ff97538452b8275cd0f4d46ab6a" Name="Diagram1">
-        <EntityTypeShape EntityType="QueueDBModel.Account" Width="1.5" PointX="5.625" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QueueDBModel.ltb_Usertype" Width="1.5" PointX="2" PointY="2.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="QueueDBModel.Queue" Width="1.5" PointX="9" PointY="2.875" IsExpanded="true" />
-        <AssociationConnector Association="QueueDBModel.FK_Account_ltb_Usertype" ManuallyRouted="false" />
-        <AssociationConnector Association="QueueDBModel.FK_Queue_Account" ManuallyRouted="false" />
+      <Diagram DiagramId="c8aca3ce43bf4df494b4c5bca185d4dc" Name="Diagram1">
+        <EntityTypeShape EntityType="QueueDBModel.Account" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QueueDBModel.Counter" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QueueDBModel.Queue" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+        <AssociationConnector Association="QueueDBModel.FK_Counter_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="QueueDBModel.FK_Queue_Counter" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

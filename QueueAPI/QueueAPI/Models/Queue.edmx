@@ -10,9 +10,8 @@
             <PropertyRef Name="account_id" />
           </Key>
           <Property Name="account_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="usertype_id" Type="int" Nullable="false" />
           <Property Name="username" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="64" Nullable="false" />
           <Property Name="first_name" Type="nvarchar" MaxLength="50" />
           <Property Name="middle_name" Type="nvarchar" MaxLength="50" />
           <Property Name="last_name" Type="nvarchar" MaxLength="50" />
@@ -21,15 +20,19 @@
           <Property Name="date_created" Type="datetime" Nullable="false" />
           <Property Name="date_modified" Type="datetime" />
           <Property Name="is_active" Type="bit" Nullable="false" />
+          <Property Name="password_salt" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <EntityType Name="ltb_Usertype">
+        <EntityType Name="Counter">
           <Key>
-            <PropertyRef Name="usertype_id" />
+            <PropertyRef Name="counter_id" />
           </Key>
-          <Property Name="usertype_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="name" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="description" Type="nchar" MaxLength="10" />
+          <Property Name="counter_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="account_id" Type="int" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="description" Type="nvarchar" MaxLength="50" />
+          <Property Name="status" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="date_created" Type="datetime" Nullable="false" />
+          <Property Name="date_modified" Type="datetime" />
           <Property Name="is_active" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Queue">
@@ -37,47 +40,47 @@
             <PropertyRef Name="queue_id" />
           </Key>
           <Property Name="queue_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="account_id" Type="int" />
+          <Property Name="counter_id" Type="int" />
           <Property Name="queue_number" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="status" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="date_created" Type="datetime" Nullable="false" />
           <Property Name="date_completed" Type="datetime" />
         </EntityType>
-        <Association Name="FK_Account_ltb_Usertype">
-          <End Role="ltb_Usertype" Type="Self.ltb_Usertype" Multiplicity="1" />
-          <End Role="Account" Type="Self.Account" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ltb_Usertype">
-              <PropertyRef Name="usertype_id" />
-            </Principal>
-            <Dependent Role="Account">
-              <PropertyRef Name="usertype_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Queue_Account">
-          <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
-          <End Role="Queue" Type="Self.Queue" Multiplicity="*" />
+        <Association Name="FK_Counter_Account">
+          <End Role="Account" Type="Self.Account" Multiplicity="1" />
+          <End Role="Counter" Type="Self.Counter" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Account">
               <PropertyRef Name="account_id" />
             </Principal>
-            <Dependent Role="Queue">
+            <Dependent Role="Counter">
               <PropertyRef Name="account_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Queue_Counter">
+          <End Role="Counter" Type="Self.Counter" Multiplicity="0..1" />
+          <End Role="Queue" Type="Self.Queue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Counter">
+              <PropertyRef Name="counter_id" />
+            </Principal>
+            <Dependent Role="Queue">
+              <PropertyRef Name="counter_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="QueueDBModelStoreContainer">
           <EntitySet Name="Account" EntityType="Self.Account" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="ltb_Usertype" EntityType="Self.ltb_Usertype" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Counter" EntityType="Self.Counter" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Queue" EntityType="Self.Queue" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Account_ltb_Usertype" Association="Self.FK_Account_ltb_Usertype">
-            <End Role="ltb_Usertype" EntitySet="ltb_Usertype" />
+          <AssociationSet Name="FK_Counter_Account" Association="Self.FK_Counter_Account">
             <End Role="Account" EntitySet="Account" />
+            <End Role="Counter" EntitySet="Counter" />
           </AssociationSet>
-          <AssociationSet Name="FK_Queue_Account" Association="Self.FK_Queue_Account">
-            <End Role="Account" EntitySet="Account" />
+          <AssociationSet Name="FK_Queue_Counter" Association="Self.FK_Queue_Counter">
+            <End Role="Counter" EntitySet="Counter" />
             <End Role="Queue" EntitySet="Queue" />
           </AssociationSet>
         </EntityContainer>
@@ -91,9 +94,8 @@
             <PropertyRef Name="account_id" />
           </Key>
           <Property Name="account_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="usertype_id" Type="Int32" Nullable="false" />
           <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="64" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="middle_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -102,67 +104,71 @@
           <Property Name="date_created" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="date_modified" Type="DateTime" Precision="3" />
           <Property Name="is_active" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="ltb_Usertype" Relationship="Self.FK_Account_ltb_Usertype" FromRole="Account" ToRole="ltb_Usertype" />
-          <NavigationProperty Name="Queues" Relationship="Self.FK_Queue_Account" FromRole="Account" ToRole="Queue" />
+          <Property Name="password_salt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Counters" Relationship="Self.FK_Counter_Account" FromRole="Account" ToRole="Counter" />
         </EntityType>
-        <EntityType Name="ltb_Usertype">
+        <EntityType Name="Counter">
           <Key>
-            <PropertyRef Name="usertype_id" />
+            <PropertyRef Name="counter_id" />
           </Key>
-          <Property Name="usertype_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="description" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="counter_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="account_id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="date_created" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="date_modified" Type="DateTime" Precision="3" />
           <Property Name="is_active" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Accounts" Relationship="Self.FK_Account_ltb_Usertype" FromRole="ltb_Usertype" ToRole="Account" />
+          <NavigationProperty Name="Account" Relationship="Self.FK_Counter_Account" FromRole="Counter" ToRole="Account" />
+          <NavigationProperty Name="Queues" Relationship="Self.FK_Queue_Counter" FromRole="Counter" ToRole="Queue" />
         </EntityType>
         <EntityType Name="Queue">
           <Key>
             <PropertyRef Name="queue_id" />
           </Key>
           <Property Name="queue_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="account_id" Type="Int32" />
+          <Property Name="counter_id" Type="Int32" />
           <Property Name="queue_number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="date_created" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="date_completed" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="Account" Relationship="Self.FK_Queue_Account" FromRole="Queue" ToRole="Account" />
+          <NavigationProperty Name="Counter" Relationship="Self.FK_Queue_Counter" FromRole="Queue" ToRole="Counter" />
         </EntityType>
-        <Association Name="FK_Account_ltb_Usertype">
-          <End Role="ltb_Usertype" Type="Self.ltb_Usertype" Multiplicity="1" />
-          <End Role="Account" Type="Self.Account" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ltb_Usertype">
-              <PropertyRef Name="usertype_id" />
-            </Principal>
-            <Dependent Role="Account">
-              <PropertyRef Name="usertype_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Queue_Account">
-          <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
-          <End Role="Queue" Type="Self.Queue" Multiplicity="*" />
+        <Association Name="FK_Counter_Account">
+          <End Role="Account" Type="Self.Account" Multiplicity="1" />
+          <End Role="Counter" Type="Self.Counter" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Account">
               <PropertyRef Name="account_id" />
             </Principal>
-            <Dependent Role="Queue">
+            <Dependent Role="Counter">
               <PropertyRef Name="account_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Queue_Counter">
+          <End Role="Counter" Type="Self.Counter" Multiplicity="0..1" />
+          <End Role="Queue" Type="Self.Queue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Counter">
+              <PropertyRef Name="counter_id" />
+            </Principal>
+            <Dependent Role="Queue">
+              <PropertyRef Name="counter_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="QueueDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Accounts" EntityType="Self.Account" />
-          <EntitySet Name="ltb_Usertype" EntityType="Self.ltb_Usertype" />
+          <EntitySet Name="Counters" EntityType="Self.Counter" />
           <EntitySet Name="Queues" EntityType="Self.Queue" />
-          <AssociationSet Name="FK_Account_ltb_Usertype" Association="Self.FK_Account_ltb_Usertype">
-            <End Role="ltb_Usertype" EntitySet="ltb_Usertype" />
+          <AssociationSet Name="FK_Counter_Account" Association="Self.FK_Counter_Account">
             <End Role="Account" EntitySet="Accounts" />
+            <End Role="Counter" EntitySet="Counters" />
           </AssociationSet>
-          <AssociationSet Name="FK_Queue_Account" Association="Self.FK_Queue_Account">
-            <End Role="Account" EntitySet="Accounts" />
+          <AssociationSet Name="FK_Queue_Counter" Association="Self.FK_Queue_Counter">
+            <End Role="Counter" EntitySet="Counters" />
             <End Role="Queue" EntitySet="Queues" />
           </AssociationSet>
         </EntityContainer>
@@ -176,7 +182,6 @@
             <EntityTypeMapping TypeName="QueueDBModel.Account">
               <MappingFragment StoreEntitySet="Account">
                 <ScalarProperty Name="account_id" ColumnName="account_id" />
-                <ScalarProperty Name="usertype_id" ColumnName="usertype_id" />
                 <ScalarProperty Name="username" ColumnName="username" />
                 <ScalarProperty Name="password" ColumnName="password" />
                 <ScalarProperty Name="first_name" ColumnName="first_name" />
@@ -187,16 +192,20 @@
                 <ScalarProperty Name="date_created" ColumnName="date_created" />
                 <ScalarProperty Name="date_modified" ColumnName="date_modified" />
                 <ScalarProperty Name="is_active" ColumnName="is_active" />
+                <ScalarProperty Name="password_salt" ColumnName="password_salt" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="ltb_Usertype">
-            <EntityTypeMapping TypeName="QueueDBModel.ltb_Usertype">
-              <MappingFragment StoreEntitySet="ltb_Usertype">
-                <ScalarProperty Name="usertype_id" ColumnName="usertype_id" />
+          <EntitySetMapping Name="Counters">
+            <EntityTypeMapping TypeName="QueueDBModel.Counter">
+              <MappingFragment StoreEntitySet="Counter">
+                <ScalarProperty Name="counter_id" ColumnName="counter_id" />
+                <ScalarProperty Name="account_id" ColumnName="account_id" />
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="status" ColumnName="status" />
                 <ScalarProperty Name="date_created" ColumnName="date_created" />
+                <ScalarProperty Name="date_modified" ColumnName="date_modified" />
                 <ScalarProperty Name="is_active" ColumnName="is_active" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -205,7 +214,7 @@
             <EntityTypeMapping TypeName="QueueDBModel.Queue">
               <MappingFragment StoreEntitySet="Queue">
                 <ScalarProperty Name="queue_id" ColumnName="queue_id" />
-                <ScalarProperty Name="account_id" ColumnName="account_id" />
+                <ScalarProperty Name="counter_id" ColumnName="counter_id" />
                 <ScalarProperty Name="queue_number" ColumnName="queue_number" />
                 <ScalarProperty Name="status" ColumnName="status" />
                 <ScalarProperty Name="name" ColumnName="name" />

@@ -1,13 +1,16 @@
 ﻿using QueueAPI.Models;
 using QueueAPI.Models.DTO;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Xml.Linq;
+using Queue = QueueAPI.Models.Queue;
 
 namespace QueueAPI.Controllers
 {
@@ -33,10 +36,10 @@ namespace QueueAPI.Controllers
                     queue.date_created = DateTime.Now;
 
                     context.Queues.Add(queue); 
-                    context.SaveChanges(); 
-                }
+                    context.SaveChanges();
 
-                return Ok();
+                    return Ok(new { queue_number = queue.queue_number });
+                }
             }
             else
             {

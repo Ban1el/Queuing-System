@@ -17,11 +17,10 @@ namespace QueueAPI.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Account()
         {
-            this.Queues = new HashSet<Queue>();
+            this.Counters = new HashSet<Counter>();
         }
     
         public int account_id { get; set; }
-        public int usertype_id { get; set; }
         public string username { get; set; }
         public string password { get; set; }
         public string first_name { get; set; }
@@ -32,9 +31,9 @@ namespace QueueAPI.Models
         public System.DateTime date_created { get; set; }
         public Nullable<System.DateTime> date_modified { get; set; }
         public bool is_active { get; set; }
+        public string password_salt { get; set; }
     
-        public virtual ltb_Usertype ltb_Usertype { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Queue> Queues { get; set; }
+        public virtual ICollection<Counter> Counters { get; set; }
     }
 }
