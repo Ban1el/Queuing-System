@@ -10,6 +10,16 @@
                     <a class="nav-link active" aria-current="page" href="@Url.Action("List", "Counter")">Counter Management</a>
                 </li>
             </ul>
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    @using (Html.BeginForm("Logout", "Login", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="nav-link btn btn-link">Logout</button>
+                    }
+                </li>
+            </ul>
         </div>
     </div>
 </nav>

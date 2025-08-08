@@ -113,5 +113,26 @@ namespace QueueDashboard.Controllers
                 return Json(new { success = false, message = "Internal Error." });
             }
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Logout()
+        {
+            //Expires the cookie
+            if (Request.Cookies["AuthToken"] != null)
+            {
+                var expiredCookie = new HttpCookie("AuthToken")
+                {
+                    Expires = DateTime.Now.AddDays(-1),
+                    Secure = true,
+                    HttpOnly = true,
+                    SameSite = SameSiteMode.Strict
+                };
+                Response.Cookies.Add(expiredCookie);
+            }
+
+            Session.Remove("account_id");
+            return RedirectToAction("Index", "Login");
+        }
     }
 }
